@@ -1,0 +1,188 @@
+
+.header {
+	padding: 20px;
+	background-color: #000000;
+}
+
+.header img {
+  float: left;
+  width: 70px;
+  height: 70px;
+}
+
+.header h2 {
+  position: relative;
+  top: 18px;
+  left: 10px;
+}
+
+.navbar{
+	background-color: #000000;
+}
+
+.nav-item{
+	cursor: pointer;
+}
+
+.navbar-nav :hover{
+  background-color:rgba(255,255,255,0.2);
+  border-radius: 10px;
+}
+
+
+.fa-search{
+	cursor: pointer;
+	border: none;
+	height: 30px;
+	background-color: #000000;
+	color: #FFFFFF;
+}
+
+
+.form-control{
+	border: none;
+	margin-right: 10px;
+}
+
+.stats{
+	background-color: #EDEDED;
+	padding-top: 30px;
+}
+
+
+.slideshow-container {
+  position: relative;
+  background: #000000;
+  color: #EC7063;
+}
+
+
+.mySlides {
+  display: none;
+  padding: 80px;
+  text-align: center;
+}
+
+
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -30px;
+  padding: 16px;
+  color: #888;
+  font-weight: bold;
+  font-size: 20px;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+
+.next {
+  position: absolute;
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+
+.prev:hover, .next:hover {
+  background-color: #FFFFFF;
+  color: white;
+}
+
+
+.dot-container { 
+    text-align: center;
+    padding: 20px;
+    background: #EDEDED;
+}
+
+
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #000000;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+
+.active, .dot:hover {
+  background-color: #EC7063;
+}
+
+
+q {font-style: italic;}
+
+
+.author {color: cornflowerblue;}
+
+#myBtn{
+	padding: 0;
+	border: none;
+	background: none;
+	color: #EC7063;
+	float: right;
+	cursor: pointer;
+}
+
+.about{
+	background-color: #000000;
+	color: #EC7063;
+}
+
+
+.fa{
+	cursor: pointer;
+}
+
+.form-control{
+	border: none;
+	border-bottom: 1px solid #79B6DE;
+}
+
+.button{
+	border: 1px solid #79B6DE;
+	background: none;
+	border-radius: 10px;
+	cursor: pointer;
+}
+
+.btn{
+	padding: 0;
+	border: none;
+	background: none;
+	color: blue;
+	cursor: pointer;
+}
+
+.registerbtn{
+  border: 1px solid #79B6DE;
+  background: none;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.fa-share-alt{
+  color: black;
+  background-color: white;
+}
+
+.fa-share-alt:hover{
+  color: black;
+}
+
+
+#zoom {
+  padding: 10px;
+  transition: transform .6s; /* Animation */
+  margin: 0 auto;
+}
+
+#zoom:hover {
+  transform: scale(1.1); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+  box-shadow: 0 5px 8px 0 #EBECEC, 0 5px 8px 0 #000000;

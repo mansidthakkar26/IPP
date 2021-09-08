@@ -1,0 +1,383 @@
+<!doctype html>
+<html lang="">
+<head>
+<!-- REQUIRED META TAGS -->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+<!--CSS JS -->
+<link rel="stylesheet" href="assets/css/mystyle.css">
+<link rel="stylesheet" href="assets/css/stylestnt.css">
+<link rel="stylesheet" href="assets/plugins/font/web-fonts-with-css/css/fontawesome-all.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<script src="assets/plugins/jquery.min.js"></script>
+<script src="assets/plugins/popper.min.js"></script>
+<script src="assets/js/myjs.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+ 
+<title>TravelCations</title>
+<link rel="shortcut icon" href="assets\images\logo.png" type="image/x-icon">
+
+<style type="text/css">
+    #result{
+      position: absolute;
+      top: 45px;
+      width: 205px;
+      max-width: 870px;
+      cursor: pointer;
+      overflow-y: auto;
+      max-height: 400px;
+      box-sizing: border-box;
+    }
+
+    #result :hover{
+      background-color: #F1F1F1;
+    }
+
+    #myBtn1 {
+      display: none;
+      position: fixed;
+      bottom: 20px;
+      right: 30px;
+      z-index: 99;
+      border: none;
+      outline: none;
+      background-color: rgba(236, 112, 99,0.4);
+      cursor: pointer;
+      padding: 15px;
+      border-radius: 50px;
+    }
+
+    #myBtn1:hover {
+      background-color: #DFB4B0;
+    }
+
+  </style>
+
+</head>
+
+<body background="assets/images/pic7.jpeg">
+
+<!-- HEADER -->
+<header class="header" id="head">
+	<div class="container">
+		<div class="row">
+			<div class="col-sm-6">
+				<img src="assets\images\logo.png" alt="logo">
+          		<h2 style="color: #EC7063">TravelCations</h2>
+         	</div>
+         	<div class="col-sm-6" style="text-align: right">
+          		<a href="mailto:travelcations.holiday@gmail.com" style="color: #EC7063">travelcations.holiday@gmail.com</a><br>
+          		<a href="tel=+916548719320" style="color: #EC7063">+91 6548719320</a>
+          	</div>
+         </div>
+    </div>
+</header>
+
+<!-- NAVIGATION BAR -->
+<nav class="navbar sticky-top navbar-expand-lg">
+  <a class="navbar-brand" href="index.html" style="color: red">Home</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" style="background-color: #FFFFFF;">
+    <span class="fa fa-bars" style="color: #000000"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item">
+        <a class="nav-link" href="index.html" style="color: #EC7063">About<span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="packages.html" style="color: #EC7063">Packages</a>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="color: #EC7063">
+          Sign In
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown" style="background-color: #000000;">
+          <a class="dropdown-item" href="signIn.html" style="color: #EC7063">Sign In</a>
+          <a class="dropdown-item" href="signUp.html" style="color: #EC7063">New? Sign Up</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="feedback.html" style="color: #EC7063">Feedback</a>
+        </div>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="gallery.html" style="color: #EC7063">Gallery</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#" style="color: #EC7063">Booking</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="payment.html" style="color: #EC7063">Payment</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="contactus.html" style="color: #EC7063">Contact Us</a>
+      </li>
+    </ul>
+
+    <!--SearchBox-->
+    <form class="form-inline">
+      <input class="form-control" type="text" id="search" placeholder="Search" aria-label="Search">
+      <input type="button" id="btn2" value="Search" type="submit" style="border: none; background-color: black; color: white;">
+
+      <ul align="center" class="list-group" id="result"></ul>
+    </form>
+
+  </div>
+</nav>
+
+<div class="" style="padding: 10px; background-color: #000000"></div>
+
+<div class="" style="padding: 20px"></div>
+
+<!--BOOKING FORM-->
+<div class="container">
+  <div class="row">
+    <div class="col-md-4">
+    </div>
+    <div class="col-md-4" style="border-radius: 10px; background-color: hsla(6, 58%, 66%,0.6);">
+      <form action="booking.php" method="POST" name="form1">
+        <br>
+        <h2>Booking</h2>
+            <p style="font-family: cursive;"><b>Thankyou for booking with us!</b></p>
+            <br>
+
+            <div class="fa fa-envelope-open"></div>
+            <label for="email"><b> Email</b></label>
+            <input type="email" class="form-control input-lg" placeholder="Enter Email" name="email" required >
+            <br>
+
+            <div class="fa fa-id-badge"></div>
+            <label for="email"><b> Name</b></label>
+            <input type="name" class="form-control input-lg" placeholder="Enter Name" name="name" required>
+            <br>
+
+            <div class="fa fa-phone"></div>
+            <label for="phone"><b> Phone</b></label>
+            <input type="tel" class="form-control input-lg" placeholder="Enter Phone Number" size="10" minlength="10" name="phnum" required>
+            <br>
+
+            <div class="fa fa-bars"></div>
+            <label for="package"><b>Select Your Package!</b></label>
+            <br>
+            <select class="form-control input-lg" name="package" style="border-radius: 5px;" onchange="pacprice()" id="sel" required>
+              <option value="">Select</option>
+              <option value="Goa" name="place" >GOA</option>
+              <option value="South-India" name="place">SOUTH INDIA</option>
+              <option value="East-India" name="place">EAST INDIA</option>
+              <option value="North-India" name="place">NORTH INDIA</option>
+              <option value="Himachal-Pradesh" name="place">HIMACHAL PRADESH</option>
+              <option value="Andaman-Nicobar" name="place">ANDAMAN & NICOBAR</option>
+              <option value="Rajasthan-Gujarat" name="place">RAJASTHAN - GUJARAT</option>
+              <option value="Kolkata" name="place">KOLKATA</option>
+              <option value="Vietnam" name="place">VIETNAM</option>
+              <option value="Sri-Lanka" name="place">SRI LANKA</option>
+              <option value="New-York" name="place">NEW YORK</option>
+              <option value="Thailand" name="place">THAILAND</option>
+              <option value="Singapore" name="place">SINGAPORE</option>
+              <option value="Malaysia" name="place">MALAYSIA</option>
+              <option value="Indonesia" name="place">INDONESIA</option>
+              <option value="Maldives" name="place">MALDIVES</option>
+              <option value="Philippines" name="place">PHILIPPINES</option>
+              <option value="UAE" name="place">UAE</option>
+              <option value="London" name="place">LONDON</option>
+              <option value="France" name="place">FRANCE</option>
+            </select>
+            <br>
+
+            <div class="fa fa-inr"></div>
+            <label for="price"><b>Price of the Package</b></label>
+            <br>
+            <input class="form-control input-lg" type="number" value="0" name="price" id="pr" readonly style="border-radius: 5px;">
+            <br>
+
+            <script type="text/javascript">
+              function pacprice() 
+              {
+                var a = document.getElementById("sel").value
+                if (a=='Goa')
+                {
+                  var p = 10000
+                }
+                else if(a=='')
+                {
+                  var p = 0
+                }
+                else if (a=='South-India')
+                {
+                  var p = 50000
+                }
+                else if (a=='East-India')
+                {
+                  var p = 20000
+                }
+                else if (a=='North-India')
+                {
+                  var p = 25000
+                }
+                else if (a=='Himachal-Pradesh')
+                {
+                  var p = 30000
+                }
+                else if (a=='Andaman-Nicobar')
+                {
+                  var p = 30000
+                }
+                else if (a=='Rajasthan-Gujarat')
+                {
+                  var p = 35000
+                }
+                else if (a=='Kolkata')
+                {
+                  var p = 15000
+                }
+                else if (a=='Vietnam')
+                {
+                  var p = 15000
+                }
+                else if (a=='Sri-Lanka')
+                {
+                  var p = 12000
+                }
+                else if (a=='New-York')
+                {
+                  var p = 100000
+                }
+                else if (a=='Thailand')
+                {
+                  var p = 120000
+                }
+                else if (a=='Singapore')
+                {
+                  var p = 170000
+                }
+                else if (a=='Malaysia')
+                {
+                  var p = 90000
+                }
+                else if (a=='Indonesia')
+                {
+                  var p = 190000
+                }
+                else if (a=='Maldives')
+                {
+                  var p = 130000
+                }
+                else if (a=='Philippines')
+                {
+                  var p = 115000
+                }
+                else if (a=='UAE')
+                {
+                  var p = 200000
+                }
+                else if (a=='London')
+                {
+                  var p = 210000
+                }
+                else if (a=='France')
+                {
+                  var p = 210000
+                }
+                var b= document.getElementById("pr").value=p
+              }
+            </script>
+
+            <div class="fa fa-users"></div>
+            <label for="travellers"><b> Number of Travellers</b></label>
+            <input type="number" class="form-control input-lg" size="2" name="travellers" min="1" max="10" value="2" required>
+            <br>
+
+            <div class="fa fa-calendar"></div>
+            <label for="date"><b> Date of Travelling</b></label>
+            <p><b>FROM:</b></p>
+            <input type="date" class="form-control input-lg" size="2" name="datef"  min="2019-11-01">
+            <br>
+            <p><b>TO:</b></p>
+            <input type="date" class="form-control input-lg" size="2" name="datet" min="2019-11-01"  max="2020-11-01">
+            <br>
+
+            <small style="font-family: cursive;"><b>WE ONLY ACCEPT PAYMENT BY CARDS!</b></small>
+
+            <br>
+            <br>
+            <center>
+              <input type="submit" class="registerbtn" style="border-color: black">
+            </center>
+            <br>
+
+      </form>
+    </div>
+    <div class="col-md-4">
+    </div>
+  </div>
+</div>
+
+<div class="" style="padding: 10px"></div>
+
+<footer>
+  <div class="" style="padding: 20px; background-color: #EDEDED">
+    <center><p>&#169; Copyright 2000 TravelCations</p></center>
+  </div>
+  <button class="fa fa-chevron-circle-up" style="float: right;" onclick="topFunction()" id="myBtn1" title="Go to top"></button>
+
+  <script type="text/javascript">
+    mybutton = document.getElementById("myBtn1");
+    window.onscroll = function() {scrollFunction()};
+
+    function scrollFunction() {
+      if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        mybutton.style.display = "block";
+      } 
+      else {
+        mybutton.style.display = "none";
+      }
+    }
+
+    function topFunction() {
+      document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+    }
+  </script>
+</footer>
+
+</body>
+</html>
+
+<script >
+    
+    $(document).ready(function(){
+
+      $.ajaxSetup({cache: false});
+      $('#search').keyup(function(){
+        $('#result').html('');
+        $('#state').val('');
+        var searchField = $('#search').val();
+        var expression = new RegExp(searchField, "i");
+
+        $.getJSON('place.json',function(place){
+
+          $.each(place,function(key, value){
+            if(value.name.search(expression) != -1 )
+            {
+              $('#result').append('<li class="list-group-item link-class">'+value.name+'</li>')
+              
+            }
+          });
+        });
+      });
+
+      $('#result').on('click','li',function(){
+
+        var click_text = $(this).text().split('|');
+
+        $('#search').val($.trim(click_text[0]));
+        $("#result").html('');
+      });
+
+      $('#btn2').on('click',function(){
+
+        window.location.replace("packages.html");
+      });
+    });
+
+
+  </script>
